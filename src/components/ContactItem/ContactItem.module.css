@@ -1,0 +1,22 @@
+.card {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px;
+  border-radius:10px;
+  background:#fff;
+  border:1px solid #eef2ff;
+  box-shadow: 0 1px 0 rgba(12,14,29,0.03);
+}
+.name { font-weight:600; }
+.number { color:var(--muted); font-size:13px; margin-top:4px; }
+.actions { display:flex; gap:8px; align-items:center; }
+.delete {
+  padding:6px 8px;
+  border-radius:8px;
+  border:1px solid #f3c0c0;
+  background:transparent;
+  color:var(--danger);
+  cursor:pointer;
+  font-weight:600;
+}

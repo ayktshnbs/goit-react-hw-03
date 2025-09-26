@@ -1,0 +1,9 @@
+.wrapper { margin: 12px 0 18px 0; }
+.input {
+  width:100%;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #e6e9ef;
+  font-size:14px;
+  background:white;
+}
