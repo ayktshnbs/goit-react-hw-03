@@ -12,6 +12,7 @@ const INITIAL_CONTACTS = [
 ];
 
 export default function App() {
+  
 const [contacts, setContacts] = useState(() => {
   try {
     const fromStorage = localStorage.getItem("contacts");
@@ -25,6 +26,7 @@ const [contacts, setContacts] = useState(() => {
     return INITIAL_CONTACTS;
   }
 });
+const [filter, setFilter] = useState(""); 
 
 useEffect(() => {
   try {
