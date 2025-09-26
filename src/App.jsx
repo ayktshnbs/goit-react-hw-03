@@ -12,17 +12,19 @@ const INITIAL_CONTACTS = [
 ];
 
 export default function App() {
-const [contacts, setContacts] = useState (() => {
+const [contacts, setContacts] = useState(() => {
   try {
-    const fromStorage = localStorage.getItem('contacts');
-    return fromStorage ? JSON.parse(fromStorage) : INITIAL_CONTACTS;
+    const fromStorage = localStorage.getItem("contacts");
+    if (fromStorage) {
+      return JSON.parse(fromStorage);
+    }
+    localStorage.setItem("contacts", JSON.stringify(INITIAL_CONTACTS));
+    return INITIAL_CONTACTS;
   } catch (error) {
-    console.error('Error parsing contacts from localStorage:', error);
+    console.error("Error parsing contacts from localStorage:", error);
     return INITIAL_CONTACTS;
   }
 });
-
-const [filter, setFilter] = useState('');
 
 useEffect(() => {
   try {
